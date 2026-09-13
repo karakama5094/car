@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ハイブリッドSUV 5年保有比較</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f4f6f8;
+    color: #1f2937;
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Helvetica Neue",
+        "Yu Gothic",
+        "Hiragino Kaku Gothic ProN",
+        Arial,
+        sans-serif;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px 16px 60px;
+}
+
+.hero {
+    background: linear-gradient(135deg, #111827, #374151);
+    color: white;
+    border-radius: 22px;
+    padding: 32px 24px;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    margin: 0 0 8px;
+    font-size: clamp(25px, 6vw, 42px);
+}
+
+.hero p {
+    margin: 0;
+    line-height: 1.7;
+    color: #e5e7eb;
+}
+
+.badge {
+    display: inline-block;
+    background: #fff;
+    color: #111827;
+    border-radius: 999px;
+    padding: 7px 13px;
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 14px;
+}
+
+.summary {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 20px;
+    margin-bottom: 22px;
+    box-shadow: 0 4px 18px rgba(0,0,0,.06);
+}
+
+.summary h2 {
+    margin-top: 0;
+}
+
+.conclusion {
+    font-size: 23px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.highlight {
+    background: #eef2ff;
+    border-left: 5px solid #374151;
+    padding: 14px;
+    border-radius: 8px;
+    line-height: 1.7;
+}
+
+.table-wrap {
+    overflow-x: auto;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 4px 18px rgba(0,0,0,.06);
+    margin-bottom: 24px;
+}
+
+table {
+    width: 100%;
+    min-width: 860px;
+    border-collapse: collapse;
+}
+
+th {
+    background: #1f2937;
+    color: white;
+    padding: 14px 10px;
+    font-size: 13px;
+}
+
+td {
+    padding: 14px 10px;
+    text-align: center;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+.rank {
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.best {
+    background: #f8fafc;
+}
+
+.cost {
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.card {
+    background: white;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 4px 18px rgba(0,0,0,.06);
+}
+
+.card h3 {
+    margin: 5px 0 14px;
+    font-size: 20px;
+}
+
+.card .maker {
+    color: #6b7280;
+    font-size: 13px;
+}
+
+.price-big {
+    font-size: 28px;
+    font-weight: 900;
+    margin: 12px 0;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+.item:last-child {
+    border-bottom: none;
+}
+
+.verdict {
+    margin-top: 24px;
+    background: #111827;
+    color: white;
+    border-radius: 20px;
+    padding: 25px;
+}
+
+.verdict h2 {
+    margin-top: 0;
+}
+
+.verdict-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 12px;
+}
+
+.verdict-box {
+    background: rgba(255,255,255,.1);
+    padding: 16px;
+    border-radius: 14px;
+}
+
+.verdict-box strong {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 18px;
+}
+
+.note {
+    margin-top: 24px;
+    background: #fff;
+    border-radius: 16px;
+    padding: 18px;
+    color: #4b5563;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+@media (max-width: 760px) {
+    .cards,
+    .verdict-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 25px 19px;
+    }
+
+    .price-big {
+        font-size: 25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <section class="hero">
+        <div class="badge">2026 → 2031 / 5年保有</div>
+        <h1>ハイブリッドSUV<br>最終3台比較</h1>
+        <p>
+            カローラクロス・ヴェゼル・ヤリスクロスを、
+            「5年間乗って売却する」という条件で比較。
+            購入価格ではなく、5年間で実際に失う金額を重視。
+        </p>
+    </section>
+
+
+    <section class="summary">
+
+        <h2>結論</h2>
+
+        <div class="conclusion">
+            総合1位：ホンダ ヴェゼル e:HEV Z
+        </div>
+
+        <div class="highlight">
+            <strong>経済性だけならヤリスクロスが1位。</strong><br>
+            ただし5年間乗ること、現在フリードに乗っていること、
+            家族利用まで考えると、約18万円の追加負担で
+            車格・室内空間・満足度を上げられるヴェゼルを総合1位と判断。
+        </div>
+
+    </section>
+
+
+    <div class="table-wrap">
+        <table>
+
+            <thead>
+                <tr>
+                    <th>総合順位</th>
+                    <th>メーカー</th>
+                    <th>車種</th>
+                    <th>排気量</th>
+                    <th>WLTC燃費</th>
+                    <th>新車価格</th>
+                    <th>5年後売却予想</th>
+                    <th>5年ガソリン代</th>
+                    <th>5年自動車税</th>
+                    <th>5年実質負担</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr class="best">
+                    <td class="rank">1位</td>
+                    <td>ホンダ</td>
+                    <td><strong>ヴェゼル<br>e:HEV Z</strong></td>
+                    <td>1,496cc</td>
+                    <td>25.3km/L</td>
+                    <td>326.8万円</td>
+                    <td>
+                        約180〜210万円<br>
+                        <strong>中心値195万円</strong>
+                    </td>
+                    <td>約33.6万円</td>
+                    <td>15.25万円</td>
+                    <td class="cost">約181万円</td>
+                </tr>
+
+                <tr>
+                    <td class="rank">2位</td>
+                    <td>トヨタ</td>
+                    <td><strong>カローラクロス<br>Hybrid Z</strong></td>
+                    <td>1,797cc</td>
+                    <td>26.4km/L</td>
+                    <td>361.4万円</td>
+                    <td>
+                        約210〜240万円<br>
+                        <strong>中心値225万円</strong>
+                    </td>
+                    <td>約32.2万円</td>
+                    <td>18.0万円</td>
+                    <td class="cost">約187万円</td>
+                </tr>
+
+                <tr>
+                    <td class="rank">3位</td>
+                    <td>トヨタ</td>
+                    <td><strong>ヤリスクロス<br>Hybrid Z</strong></td>
+                    <td>1,490cc</td>
+                    <td>27.8km/L</td>
+                    <td>299.2万円</td>
+                    <td>
+                        約170〜195万円<br>
+                        <strong>中心値182万円</strong>
+                    </td>
+                    <td>約30.6万円</td>
+                    <td>15.25万円</td>
+                    <td class="cost">約163万円</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+    </div>
+
+
+    <section class="cards">
+
+        <div class="card">
+            <div class="maker">HONDA</div>
+            <h3>ヴェゼル e:HEV Z</h3>
+
+            <div class="price-big">
+                約181万円
+            </div>
+
+            <div class="item">
+                <span>5年間実質負担</span>
+                <strong>2位</strong>
+            </div>
+
+            <div class="item">
+                <span>月換算</span>
+                <strong>約30,100円</strong>
+            </div>
+
+            <div class="item">
+                <span>燃費</span>
+                <strong>25.3km/L</strong>
+            </div>
+
+            <div class="item">
+                <span>強み</span>
+                <strong>総合バランス</strong>
+            </div>
+
+            <div class="item">
+                <span>判断</span>
+                <strong>総合1位</strong>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="maker">TOYOTA</div>
+            <h3>カローラクロス Hybrid Z</h3>
+
+            <div class="price-big">
+                約187万円
+            </div>
+
+            <div class="item">
+                <span>5年間実質負担</span>
+                <strong>3位</strong>
+            </div>
+
+            <div class="item">
+                <span>月換算</span>
+                <strong>約31,100円</strong>
+            </div>
+
+            <div class="item">
+                <span>燃費</span>
+                <strong>26.4km/L</strong>
+            </div>
+
+            <div class="item">
+                <span>強み</span>
+                <strong>広さ・車格</strong>
+            </div>
+
+            <div class="item">
+                <span>判断</span>
+                <strong>家族利用1位</strong>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="maker">TOYOTA</div>
+            <h3>ヤリスクロス Hybrid Z</h3>
+
+            <div class="price-big">
+                約163万円
+            </div>
+
+            <div class="item">
+                <span>5年間実質負担</span>
+                <strong>1位</strong>
+            </div>
+
+            <div class="item">
+                <span>月換算</span>
+                <strong>約27,200円</strong>
+            </div>
+
+            <div class="item">
+                <span>燃費</span>
+                <strong>27.8km/L</strong>
+            </div>
+
+            <div class="item">
+                <span>強み</span>
+                <strong>経済性</strong>
+            </div>
+
+            <div class="item">
+                <span>弱点</span>
+                <strong>室内が小さい</strong>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="verdict">
+
+        <h2>5年乗るならどう選ぶ？</h2>
+
+        <div class="verdict-grid">
+
+            <div class="verdict-box">
+                <strong>総合</strong>
+                ヴェゼル e:HEV Z
+                <br><br>
+                価格・広さ・燃費・5年後リセールのバランスが最も良い。
+            </div>
+
+            <div class="verdict-box">
+                <strong>家族・快適性</strong>
+                カローラクロス Hybrid Z
+                <br><br>
+                5年間でヴェゼルとの差は約6万円。
+                この差なら広さを優先する価値あり。
+            </div>
+
+            <div class="verdict-box">
+                <strong>最安</strong>
+                ヤリスクロス Hybrid Z
+                <br><br>
+                5年間の経済性は最強。
+                ただしフリードからは明確に狭くなる。
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="summary" style="margin-top:24px;">
+
+        <h2>私ならどうするか</h2>
+
+        <p style="line-height:1.9;margin-bottom:0;">
+            <strong>
+            5年間乗るなら「ヴェゼル」か「カローラクロス」の2択にします。
+            </strong>
+            <br><br>
+
+            ヤリスクロスは5年間で最も安く、
+            ヴェゼルとの差は約18万円です。
+            しかし60か月で割れば
+            <strong>月約3,000円</strong>しか違いません。
+            <br><br>
+
+            その月3,000円で、
+            室内空間・後席・乗り心地・車格を上げられるなら、
+            5年間乗る車としてはヴェゼルの方が合理的です。
+            <br><br>
+
+            さらにカローラクロスとの差は5年間で約6万円、
+            月額では約1,000円。
+            <br><br>
+
+            <strong>
+            室内の広さを重視するなら、
+            最終的にはカローラクロスを選んでも経済的な差はかなり小さい、
+            というのが今回の重要な結論です。
+            </strong>
+        </p>
+
+    </section>
+
+
+    <div class="note">
+
+        <strong>計算前提</strong><br>
+
+        ・2026年購入 → 2031年売却<br>
+        ・年間走行距離：10,000km<br>
+        ・5年間総走行距離：50,000km<br>
+        ・レギュラーガソリン：170円/L固定で試算<br>
+        ・事故歴、修復歴なし<br>
+        ・FFモデル<br>
+        ・5年後売却価格は2026年現在の5年落ち中古車・買取相場を基準に推定<br>
+        ・自動車税は2026年度千葉県税率を使用<br><br>
+
+        <strong>5年実質負担額</strong> =
+        新車価格 − 5年後売却価格 ＋ ガソリン代 ＋ 自動車税
+        <br><br>
+
+        ※2031年の中古車価格は確定していないため、売却価格は予測です。<br>
+        ※任意保険、駐車場代、登録諸費用、ローン金利、
+        車検費用、タイヤ・オイル等の消耗品は含めていません。<br>
+        ※売却時期、ボディカラー、走行距離、事故歴、モデルチェンジによって
+        リセール価格は大きく変動します。
+
+    </div>
+
+</div>
+
+</body>
+</html>
